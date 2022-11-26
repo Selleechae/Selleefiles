@@ -1,0 +1,26 @@
+print("TYPE THE NUMBER OF THE SHAPE TO CALCULATE THE AREA OF")
+select=int(input("[1] SQUARE [2] CIRCLE: "))
+
+if select == 1:
+    print("SELECT WHAT TO CALCULATE OF SQUARE: ")
+    int(input("[1] VOLUME [2] AREA: "))
+    if select == 1:
+    	s1=float(input("Enter the length: "))
+    	s2=float(input("Enter the width: "))
+    	s3=float(input("Enter the height: "))
+    	volume=s1*s2*s3
+    	print("The volume of your square is",volume)
+    elif select == 2:
+    	s1=float(input("Enter the value of the 1st side: "))
+    	s2=float(input("Enter the value of the 2nd side: "))
+    	area=s1*s2
+    	print("The area of the square is",area)
+    else:
+    	print("Wrong input!")
+elif select == 2:
+	print("AREA OF THE CIRCLE")
+	circle=float(input("Enter the radius of the circle: "))
+	area=3.141592653*(circle*circle)
+	print("The area of the circle is",area)
+else:
+	("Wrong input")
