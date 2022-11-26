@@ -1,0 +1,13 @@
+s = 2
+
+while s <= 6:
+     
+     if s == 5:
+          
+          break
+          
+     print(s)
+     
+     s += 2
+     
+     print("end")
