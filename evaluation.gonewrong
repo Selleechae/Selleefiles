@@ -1,0 +1,342 @@
+print("\n                                         WELCOME TO PHINMA EDUCATION NETWORK")
+print("                               Making life better Through Education here in PHINMA COC")
+print("           PHINMA CAGAYAN DE ORO COLLEGE (Main Campus) Online Enrollment Form for Freshmen s.y. 2022-2023")
+
+print("\n=================================================================================================================\n")
+print("                                           STUDENT STATUS AND INFORMATION")
+print("\n=================================================================================================================")
+while True:
+    print("\nFiill up this form for Evaluation. \nPut NA if Not Applicable.")
+    print("\nKindly choose what is your status below : [1] Continuing , [2] New")
+    status = int(input("\nStatus : "))
+
+    if status == 1:
+        print("\nStudent Status : Continuing")
+        date = input("\nDate : ")
+        name = input("\nEnter your full Name: ")
+        idNo = input("Enter ID number: ")
+        email = input("Enter your email for updates: ")
+        phoneNo = input("Enter Phone Number: ")
+        acp = input("Enter Alternative Number: ")
+      
+        print("\nPreferred Module Distribution : [1] Delivery , [2] Onsite")
+        prmds = int(input("Choosen Module Distribution: "))
+        if prmds == 1:
+             print("Module distribution is delivery, please wait the call for more details.")
+        else:
+             print("Module distribution is onsite, please visit the CSDL page for announcements.")
+
+        print("\nPlease select your Course [1] CIT , [2] COE , [3] CAE , [4] CSSG , [5] CMA , [6] CAHS")
+
+        course = int(input("\nEnter your Course : "))
+        if course <= 6:
+            if course == 1:
+                print("\nCourse : CIT \nFee : 25, 966")
+            elif course == 2:
+                print("\nCourse : COE \nFee : 20, 785")
+            elif course == 3:
+                print("\nCourse : CAE \nFee : 25,722")
+            elif course == 4:
+                print("\nCourse : CSSG \nFee : 21,037 ")
+            elif course == 5:
+                print("\nCourse : CMA \nFee : 20,855")
+            elif course == 6:
+                print("\nCourse : CAHS \nFee : 28,537")
+        else:
+            print("Invalid Course!")
+
+        print("\nIf you want to continue the transaction please choose your payment method.")
+        print("[1] Gcash , [2] Paypal , [3] PayMaya , [4] BDO")
+        payment = input("\nPayment Method : ")
+
+        print("\nAfter that kindly choose your payment for : [1] Downpayment , [2] Tuition Fee")
+        paymentM = int(input("\nPayment : "))
+        import time
+
+        if paymentM == 1:
+            print("\nPayment for : Downpayment")
+            amount = float(input("Enter Amount of Payment : "))
+            charge = 15
+            payment = 750 + charge
+            bal = 750 - payment
+            change = amount - payment
+            time.sleep(1)
+            print("\nPlease wait for the receipt.....")
+            time.sleep(2)
+            print(
+                "\n=================================================================================================================\n")
+            print("                                           RECEIPT PAYMENT TRANSACTION")
+            print(
+                "\n=================================================================================================================")
+
+            time.sleep(3)
+            print("\nName : ", name)
+            print("Student No. : ", idNo)
+            print("\nTotal : ", payment)
+            print("Balance : ", bal)
+            print("Change : ", change)
+            print("\nDate : ", date)
+            time.sleep(4)
+            print("\nYou already paid the Downpayment.")
+            ask1 = input("Do you wish to go back? if yes,put yes to proceed: ")
+            if ask1 == "yes":
+                continue
+            time.sleep(1)
+            print("\nThank you for enrolling in PHINMA COC.")
+            print("Please wait for the School Confirmation and receive your Orf thru Gmail.Thankyou!")
+            break
+
+        elif paymentM == 2:
+            print("\nPayment for : Tuition Fee")
+            payment = int(input("\nEnter Amount of Payment : "))
+
+            if course == 1:
+                tuition = 25966
+                charge = 15
+                sum = payment - tuition
+                print("\nThank you for using our sytem. Please wait for your receipt to come out and get your card.")
+            elif course == 2:
+                tuition = 20785
+                charge = 15
+                sum = payment - tuition
+                print("\nThank you for using our sytem. Please wait for your receipt to come out and get your card.")
+            elif course == 3:
+                tuition = 25722
+                charge = 15
+                sum = payment - tuition
+                print("\nThank you for using our sytem. Please wait for your receipt to come out and get your card.")
+            elif course == 4:
+                tuition = 21037
+                charge = 15
+                sum = payment - tuition
+                print("\nThank you for using our sytem. Please wait for your receipt to come out and get your card.")
+            elif course == 5:
+                tuition = 20855
+                charge = 15
+                sum = payment - tuition
+                print("\nThank you for using our sytem. Please wait for your receipt to come out and get your card.")
+            elif course == 6:
+                tuition = 28537
+                charge = 15
+                sum = payment - tuition
+                print("\nThank you for using our sytem. Please wait for your receipt to come out and get your card.")
+            else:
+                print("Invalid Payment!")
+
+            if payment <= tuition:
+                change = 0
+            else:
+                change = payment - tuition - charge
+
+            if payment <= tuition:
+                bal = tuition - payment
+            elif payment >= tuition:
+                bal = 0
+            else:
+                print("Invalid!")
+            
+            import time
+
+            time.sleep(1)
+            print("\nReceipt is in progress...")
+            time.sleep(2)
+            print(
+                "\n=================================================================================================================\n")
+            print("                                           RECEIPT PAYMENT TRANSACTION")
+            print(
+                "\n=================================================================================================================")
+
+            time.sleep(3)
+            print("Name : ", name)
+            print("Student ID : ", idNo)
+
+            print("\nPayment : ", payment)
+            print("Change : ", change)
+            print("Balance : ", bal)
+            print("\nDate : ", date)
+
+            time.sleep(4)
+            print("\nYou already paid the Tuition Fee.")
+            ask1 = input("Do you wish to go back? if yes,put yes to proceed: ")
+            if ask1 == "yes":
+                continue
+            time.sleep(1)
+            print("\nThank you for enrolling in PHINMA COC.")
+            print("Please wait for the School Confirmation and receive your Orf thru Gmail.Thankyou!")
+            break
+
+    elif status == 2:
+        print("\nStudent Status : New")
+        date = input("\nDate : ")
+        name = input("\nEnter your full Name: ")
+        gender=str(input("Female or Male: "))
+        email = input("Enter your personal email for updates: ")
+        phoneNo = input("Enter Phone Number: ")
+        acp = input("Enter Alternative Number: ")
+        bday = input("Enter Your Birthday: ")
+        lrn = input("Enter your LRN Number: ")
+        fpname = input("\nEnter Parent/Guardian's name: ")
+        pgnum = input("Enter Parent/Guardian Cellphone Number: ")
+        addrss = input("Enter permanent Address: ")
+        crrntads = input("Enter your current Address: ")
+        school = input("Enter last school attended: ")
+        sdrrss = str(input("Address of School: "))
+        type = input("Type of School: ")
+        
+        print("""Kindly upload the following requirements
+             °Form 138
+             °Birth Certificate
+             °Report Card
+             °Good moral""")
+        print("Pass the requirements during the first day of the class or when it is available.")
+
+        print("\nMode of Learning : [1] Flex Learning , [2] RAD")
+        mdlrng = int(input("Learning Modality: "))
+        
+        print("Issued Sim Card : [1] TM , [2] Smart")
+        issmcrd = int(input("Sim Card: "))
+        
+        print("\nPreferred Module Distribution : [1] Delivery , [2] Onsite")
+        prmds = int(input("Chosen Module Distribution: "))
+        if prmds == 1:
+             print("Module distribution is delivery, please wait for the call for more details.")
+        else:
+             print("Module distribution is onsite, please visit the CSDL page for announcements.")
+
+        print("\nPlease select your Course [1] CIT , [2] COE , [3] CAE , [4] CSSG , [5] CMA , [6] CAHS")
+
+        course = int(input("\nEnter your Course : "))
+        if course <= 6:
+            if course == 1:
+                print("\nCourse : CIT \nFee : 25, 966")
+            elif course == 2:
+                print("\nCourse : COE \nFee : 20, 785")
+            elif course == 3:
+                print("\nCourse : CAE \nFee : 25,722")
+            elif course == 4:
+                print("\nCourse : CSSG \nFee : 21,037 ")
+            elif course == 5:
+                print("\nCourse : CMA \nFee : 20,855")
+            elif course == 6:
+                print("\nCourse : CAHS \nFee : 28,537")
+        else:
+            print("Invalid Course!")
+
+        print("\nIf you want to continue the transaction please choose your payment method.")
+        print("[1] Gcash , [2] Paypal , [3] PayMaya , [4] BDO")
+        payment = input("\nPayment Method : ")
+
+        print("\nAfter that kindly choose your payment for : [1] Downpayment , [2] Tuition Fee")
+        paymentM = int(input("\nPayment : "))
+        import time
+
+        if paymentM == 1:
+            print("\nPayment for : Downpayment")
+            amount = float(input("Enter Amount of Payment : "))
+            charge = 15
+            payment = 750 + charge
+            bal = 750 - payment
+            change = amount - payment
+            time.sleep(1)
+            print("\nPlease wait for the receipt.....")
+            time.sleep(2)
+            print(
+                "\n=================================================================================================================\n")
+            print("                                           RECEIPT PAYMENT TRANSACTION")
+            print(
+                "\n=================================================================================================================")
+
+            time.sleep(3)
+            print("\nName : ", name)
+            print("\nTotal : ", payment)
+            print("Balance : ", bal)
+            print("Change : ", change)
+            print("\nDate : ", date)
+            time.sleep(4)
+            print("\nYou already paid the Downpayment.")
+            ask1 = input("Do you wish to go back? if yes,put yes to proceed: ")
+            if ask1 == "yes":
+                continue
+            time.sleep(1)
+            print("\nThank you for enrolling in PHINMA COC.")
+            print("Please wait for the School Confirmation and receive your Orf thru Gmail.Thankyou!")
+            break
+
+        elif paymentM == 2:
+            print("\nPayment for : Tuition Fee")
+            payment = int(input("\nEnter Amount of Payment : "))
+
+            if course == 1:
+                tuition = 25966
+                charge =15
+                sum = payment - tuition 
+                print("\nThank you for using our system. Please wait for your receipt to come out and get your card.")
+            elif course == 2:
+                tuition = 20785
+                charge = 15
+                sum = payment - tuition 
+                print("\nThank you for using our system. Please wait for your receipt to come out and get your card.")
+            elif course == 3:
+                tuition = 25722
+                charge = 15
+                sum = payment - tuition 
+                print("\nThank you for using our system. Please wait for your receipt to come out and get your card.")
+            elif course == 4:
+                tuition = 21037
+                charge = 15
+                sum = payment - tuition 
+                print("\nThank you for using our system. Please wait for your receipt to come out and get your card.")
+            elif course == 5:
+                tuition = 20855
+                charge = 15
+                sum = payment - tuition 
+                print("\nThank you for using our system. Please wait for your receipt to come out and get your card.")
+            elif course == 6:
+                tuition = 28537
+                charge = 15
+                sum = payment - tuition 
+                print("\nThank you for using our system. Please wait for your receipt to come out and get your card.")
+            else:
+                print("Invalid Payment!")
+
+            if payment <= tuition:
+                change = 0
+            else:
+                change = payment - tuition - charge
+
+            if payment <= tuition:
+                bal = tuition - payment
+            elif payment >= tuition:
+                bal = 0
+            else:
+                print("Invalid!")
+
+            import time
+
+            time.sleep(1)
+            print("\nReceipt is in progress...")
+            time.sleep(2)
+            print(
+                "\n=================================================================================================================\n")
+            print("                                           RECEIPT PAYMENT TRANSACTION")
+            print(
+                "\n=================================================================================================================")
+
+            time.sleep(3)
+            print("Name : ", name)
+
+            print("\nPayment : ", payment)
+            print("Change: ", change)
+            print("Balance : ", bal)
+            print("\nDate : ", date)
+
+            time.sleep(4)
+            print("\nYou already paid the Tuition Fee.")
+            ask1 = input("Do you wish to go back? if yes,put yes to proceed: ")
+            if ask1 == "yes":
+
+                continue
+            time.sleep(1)
+            print("\nThank you for enrolling in PHINMA COC.")
+            print("Please wait for the School Confirmation and receive your Orf thru Gmail.Thankyou!")
+            break
